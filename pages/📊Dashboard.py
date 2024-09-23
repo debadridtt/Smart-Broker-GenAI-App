@@ -9,3 +9,9 @@ st.markdown("# Properties Insights")
 st.sidebar.header("Properties Insights")
 
 df = pd.read_csv('Datasets/properties.csv')
+df = df[df['Possession Status'].isin(['Ready to Move', 'Under Construction'])]
+df.reset_index(drop=True, inplace=True)
+
+possesstion_status = st.multiselect(
+        "Choose Property Possession Status", list(df['Possession Status'].unique()), ["Ready to Move", "Under Construction"]
+    )
