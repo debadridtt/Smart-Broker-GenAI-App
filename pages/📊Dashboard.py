@@ -6,7 +6,7 @@ import plotly.express as px
 import warnings
 warnings.filterwarnings('ignore')
 
-st.set_page_config(page_title="Griharaj: Insights", page_icon="📊", layout='wide', initial_sidebar_state="auto")
+st.set_page_config(page_title="Smart Broker: Insights", page_icon="📊", layout='wide', initial_sidebar_state="auto")
 
 st.markdown("### Insights of available properties in Mumbai, India")
 st.sidebar.header("Mumbai Properties Insights")
@@ -54,3 +54,22 @@ cols = st.columns([1.25, 1])
 
 cols[0].plotly_chart(fig1, theme=None, use_container_width = True)
 cols[1].plotly_chart(fig2, theme=None)
+
+data_p2 = data_p2[data_p2['Units Available'] >= 0]
+data_p2.reset_index(drop=True, inplace=True)
+
+data_p2 = data_p2[['ID', 'Possession Status', 'Price (English)', 'Area Name', 'Location', 'Floor No', 'Units Available', 'Covered Area', 'sqft Price ']]
+st.write(data_p2)
+
+def convert_to_csv(df):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+    return df.to_csv(index=False).encode('utf-8')
+
+csv = convert_to_csv(df)
+
+download1 = st.download_button(
+    label="Download data as CSV",
+    data=csv,
+    file_name='prop_list_df.csv',
+    mime='text/csv'
+)
