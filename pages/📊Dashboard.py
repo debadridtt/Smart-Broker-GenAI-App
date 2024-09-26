@@ -50,7 +50,7 @@ fig2 = px.bar(df_location_property_count, x='Area Name', y='Units Available', co
 fig2.update_xaxes(showticklabels=False)
 
 
-cols = st.columns([1.25, 1])
+cols = st.columns([1, 1])
 
 cols[0].plotly_chart(fig1, theme=None, use_container_width = True)
 cols[1].plotly_chart(fig2, theme=None)
@@ -59,6 +59,7 @@ data_p2 = data_p2[data_p2['Units Available'] >= 0]
 data_p2.reset_index(drop=True, inplace=True)
 
 data_p2 = data_p2[['ID', 'Possession Status', 'Price (English)', 'Area Name', 'Location', 'Floor No', 'Units Available', 'Covered Area', 'sqft Price ']]
+
 st.write(data_p2)
 
 def convert_to_csv(df):
