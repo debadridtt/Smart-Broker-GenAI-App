@@ -1,0 +1,47 @@
+from dotenv import load_dotenv
+import os
+import google.generativeai as genai
+import pandas as pd
+from contextlib import redirect_stdout
+from io import StringIO
+import streamlit as st
+import numpy as np
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+st.set_page_config(page_title="Smart Broker: Chat", page_icon="🤖", layout='wide', initial_sidebar_state="auto")
+st.title("Welcome to Smart Broker Chat")
+
+model = genai.GenerativeModel("gemini-pro")
+
+def get_gemini_response(Question):
+    response = model.generate_content(Question)
+    return f"{response.text}"
+
+input = st.text_input("Ask your question:", key="input")
+submit = st.button("Submit!")
+
+if submit:
+        response = get_gemini_response(input)
+        st.subheader("The response is")
+        st.write(response)
+
+# uploaded_file = st.file_uploader("Upload CSV/Excel file", type=["csv", "xlsx"])
+
+# if uploaded_file is not None:
+#     if not os.path.isfile(uploaded_file.name):
+#         st.error(f"Error: File '{uploaded_file.name}' does not exist.")
+#         st.stop()
+
+#     df = pd.read_csv(uploaded_file)
+
+#     st.subheader("Top 5 Rows of the DataFrame:")
+#     st.write(df.head(5))
+
+    
+
+    # response = get_gemini_response(variable)
+    # start_index1 = response.find('#')
+    # start_index2 = response.rfind(')')
+    # exec_code = response[start_index1:start_index2 + 1]
