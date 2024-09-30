@@ -27,17 +27,38 @@ if submit:
         st.subheader("The response is")
         st.write(response)
 
-# uploaded_file = st.file_uploader("Upload CSV/Excel file", type=["csv", "xlsx"])
+uploaded_file = st.file_uploader("Upload CSV/Excel file", type=["csv", "xlsx"])
 
-# if uploaded_file is not None:
-#     if not os.path.isfile(uploaded_file.name):
-#         st.error(f"Error: File '{uploaded_file.name}' does not exist.")
-#         st.stop()
+if uploaded_file is not None:
+    if not os.path.isfile("D:/Downloads/" + uploaded_file.name):
+        st.error(f"Error: File '{uploaded_file.name}' does not exist.")
+        st.stop()
 
-#     df = pd.read_csv(uploaded_file)
+    df = pd.read_csv("D:/Downloads/" + uploaded_file.name)
 
-#     st.subheader("Top 5 Rows of the DataFrame:")
-#     st.write(df.head(5))
+    st.subheader("Top 5 Rows of the DataFrame:")
+    st.write(df.head(5))
+
+variable = st.text_input("Enter the question:")
+ask_question = st.button("Ask Question!")
+
+if uploaded_file is not None:
+    question = f"Use the dataframe with name df with columns {df.columns} and generate python code for " + variable + 'and return only\
+        developer, value, location, covered area, possession status, ID and units available columns'
+
+if ask_question:
+    response = get_gemini_response(question)
+    st.write(response)
+    st.subheader("The response is")
+    start_index1 = response.find('#')
+    start_index2 = response.rfind(')')
+    exec_code = response[start_index1:start_index2 + 1]
+    with StringIO() as output_buffer:
+        with redirect_stdout(output_buffer):
+            exec(exec_code)
+        captured_output = output_buffer.getvalue()
+    st.subheader("Captured Output:")
+    st.code(captured_output, language='python')
 
     
 
