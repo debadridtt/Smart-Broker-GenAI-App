@@ -43,12 +43,15 @@ variable = st.text_input("Enter the question:")
 ask_question = st.button("Ask Question!")
 
 if uploaded_file is not None:
-    question = f"Use the dataframe with name df with columns {df.columns} and generate python code for " + variable + 'and return only\
-        developer, value, location, covered area, possession status, ID and units available columns'
+    question = f"use the dataframe with name df and columns ['Area Name', 'Description/Amenities', 'Price'] to generate pandas code " + variable \
+        + 'For a string column of a dataframe, to apply a filter use df[column].str.lower().str.contains() and for integer column use df[column] >=.\
+            In the filtered dataframe keep only columns [ID, Area Name, Developer, Description/Amenities, Price]. Print the dataframe'
+        # + 'and return only\
+        # developer, value, location, covered area, possession status, ID and units available columns'
 
 if ask_question:
     response = get_gemini_response(question)
-    st.write(response)
+    # st.write(response)
     st.subheader("The response is")
     start_index1 = response.find('#')
     start_index2 = response.rfind(')')
