@@ -27,29 +27,32 @@ if submit:
         st.subheader("The response is")
         st.write(response)
 
-uploaded_file = st.file_uploader("Upload CSV/Excel file", type=["csv", "xlsx"])
+# uploaded_file = st.file_uploader("Upload CSV/Excel file", type=["csv", "xlsx"])
 
-if uploaded_file is not None:
-    if not os.path.isfile("D:/Downloads/" + uploaded_file.name):
-        st.error(f"Error: File '{uploaded_file.name}' does not exist.")
-        st.stop()
+# if uploaded_file is not None:
+#     if not os.path.isfile("D:/Downloads/" + uploaded_file.name):
+#         st.error(f"Error: File '{uploaded_file.name}' does not exist.")
+#         st.stop()
 
-    df = pd.read_csv("D:/Downloads/" + uploaded_file.name)
+df = pd.read_csv("Datasets/props cleaned.csv")
 
-    st.subheader("Top 5 Rows of the DataFrame:")
-    st.write(df.head(5))
+    # st.subheader("Top 5 Rows of the DataFrame:")
+    # st.write(df.head(5))
 
 variable = st.text_input("Enter the question:")
-ask_question = st.button("Ask Question!")
+ask_question = st.button("Generate property recommendations!")
 
-if uploaded_file is not None:
-    question = f"use the dataframe with name df and columns ['Area Name', 'Description/Amenities', 'Price'] to generate pandas code " + variable \
-        + 'For a string column of a dataframe, to apply a filter use df[column].str.lower().str.contains() and for integer column use df[column] >=.\
-            In the filtered dataframe keep only columns [ID, Area Name, Developer, Description/Amenities, Price]. Print the dataframe'
+# if uploaded_file is not None:
+#     question = f"use the dataframe with name df and columns ['Area Name', 'Description/Amenities', 'Price'] to generate pandas code " + variable \
+#         + 'For a string column of a dataframe, to apply a filter use df[column].str.lower().str.contains() and for integer column use df[column] >=.\
+#             In the filtered dataframe keep only columns [ID, Area Name, Developer, Description/Amenities, Price]. Print the dataframe'
         # + 'and return only\
         # developer, value, location, covered area, possession status, ID and units available columns'
 
 if ask_question:
+    question = f"use the dataframe with name df and columns ['Area Name', 'Description/Amenities', 'Price'] to generate pandas code " + variable \
+        + 'For a string column of a dataframe, to apply a filter use df[column].str.lower().str.contains() and for integer column use df[column] >=.\
+            In the filtered dataframe keep only columns [ID, Area Name, Developer, Description/Amenities, Price]. Print the dataframe'
     response = get_gemini_response(question)
     # st.write(response)
     st.subheader("The response is")
