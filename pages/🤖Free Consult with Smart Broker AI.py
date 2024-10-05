@@ -19,8 +19,8 @@ def get_gemini_response(Question):
     response = model.generate_content(Question)
     return f"{response.text}"
 
-input = st.text_input("Ask your question:", key="input")
-submit = st.button("Submit!")
+input = st.text_input("Chat with Smart Broker to know about Real-estate market in Mumbai:", key="input")
+submit = st.button("Ask Question!")
 
 if submit:
         response = get_gemini_response(input)
@@ -39,7 +39,7 @@ df = pd.read_csv("Datasets/props cleaned.csv")
     # st.subheader("Top 5 Rows of the DataFrame:")
     # st.write(df.head(5))
 
-variable = st.text_input("Enter the question:")
+variable = st.text_input("Enter requirements to view recommended properties in Mumbai:")
 ask_question = st.button("Generate property recommendations!")
 
 # if uploaded_file is not None:
