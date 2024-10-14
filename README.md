@@ -1,5 +1,5 @@
-# Databricks-GenAI-WC
-Databricks GenAI World Cup Hackathon App
+# Smart Broker GenAI App
+The Smart Broker GenAI App was developed for the Databricks Gen AI World Cup which was organized online around Sep-Oct, 2024
 
 Smart Broker is a GenAI powered chatbot and dashboard app framework built specifically to help customers take the right decisions for real-estate investments.
 
