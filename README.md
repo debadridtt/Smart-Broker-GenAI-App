@@ -24,6 +24,8 @@ The main motive of the app is to solve the below problems:
 - Return on investment in the property is guaranteed as the GenAI and the dashboard helps the user with all questions that he/she might have
 - With this app, whether someone plans to buy a property as investment or for staying, both purposes will be served as we tend to return most accurate list of properties available for the user
 
+**Detailed App Demo: https://www.youtube.com/watch?v=m59kSk1YhOo**
+
 ### How the app is designed:
 
 ![Smart Broker](https://github.com/user-attachments/assets/e4b88d3f-d1c2-4927-8a4c-9ac72ce7dafe)
