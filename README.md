@@ -31,7 +31,7 @@ The main motive of the app is to solve the below problems:
 ![Smart Broker](https://github.com/user-attachments/assets/e4b88d3f-d1c2-4927-8a4c-9ac72ce7dafe)
 
 #### Tools Used:
-- Streamit
+- Streamlit
 - Google Gemini LLM API
 
 ## A few screenshots of the app
