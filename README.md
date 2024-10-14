@@ -1,5 +1,5 @@
-# Databricks-GenAI-WC
-Databricks GenAI World Cup Hackathon App
+# Smart Broker GenAI App
+The Smart Broker GenAI App was developed for the Databricks Gen AI World Cup which was organized online around Sep-Oct, 2024
 
 Smart Broker is a GenAI powered chatbot and dashboard app framework built specifically to help customers take the right decisions for real-estate investments.
 
@@ -8,7 +8,7 @@ Real estate sector in India is expected to reach USD 1 trillion in market size b
 In FY23, India’s residential property market witnessed with the value of home sales reaching an all-time high of Rs. 3.47 lakh crore (USD 42 billion), marking a robust 48% YoY increase. The volume of sales also exhibited a strong growth trajectory, with a 36% rise to 379,095 units sold. Indian real estate developers operating in the country’s major urban centers are poised to achieve a significant feat in 2023, with the completion of approximately 558,000 homes. In 2023, demand for residential properties surged in the top 8 Indian cities, driven by mid-income, premium, and luxury segments despite challenges like high mortgage rates and property prices. 
 Reference: https://www.ibef.org/industry/real-estate-india
 
-Reference for Kaggle Open-source Dataset used: https://www.kaggle.com/datasets/shudhanshusingh/real-estate-properties-dataset?fbclid=IwY2xjawF586hleHRuA2FlbQIxMAABHRVEvOnR9q9PbPwNdaa4ubMDFowszqHKiKrgEkv4CYmUm6qarndUB4HzDg_aem_QVfmJpWGddV-_Tdkuo-MrA
+<a href='https://www.kaggle.com/datasets/shudhanshusingh/real-estate-properties-dataset?fbclid=IwY2xjawF586hleHRuA2FlbQIxMAABHRVEvOnR9q9PbPwNdaa4ubMDFowszqHKiKrgEkv4CYmUm6qarndUB4HzDg_aem_QVfmJpWGddV-_Tdkuo-MrA'>Link to Kaggle Open-source Dataset used</a>
 
 This app is built to for the following functionalities:
 
