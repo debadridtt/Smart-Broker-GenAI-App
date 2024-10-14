@@ -1,6 +1,3 @@
-streamlit
-google-generativeai
+streamlit==1.32.0
+google-generativeai==0.7.2
 python-dotenv
-pypdf
-langchain_google_genai
-langchain

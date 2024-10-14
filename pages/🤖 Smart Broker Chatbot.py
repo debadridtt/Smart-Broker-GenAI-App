@@ -5,10 +5,7 @@ import pandas as pd
 from contextlib import redirect_stdout
 from io import StringIO
 import streamlit as st
-import numpy as np
 from IPython.display import Markdown
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
