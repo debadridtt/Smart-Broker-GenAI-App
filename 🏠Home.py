@@ -39,7 +39,7 @@ st.markdown(
 
     - Check out [Smart Broker Dashboard](http://localhost:8501/Smart_Broker_Dashboard)
     - Dashbaord visualizes information related to different properties across Mumbai, India
-    - Use information gathered from Chatbot to find the ideal property for investment or for staying
+    - Feed information gathered from Chatbot to Smart Broker GenAI to get recommendations of ideal properties for investment or for staying
 
     ### Real-estate Market Cap in India: 
      

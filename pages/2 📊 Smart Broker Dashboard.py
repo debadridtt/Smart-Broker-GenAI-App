@@ -129,8 +129,8 @@ def get_gemini_response(Question):
     return f"{response.text}"
 
 st.subheader("Get Smart Broker GenAI based Recommendations of Properties for investment")
-variable = st.text_input("Enter requirements to view recommended properties in Mumbai:")
-ask_question = st.button("Generate property recommendations!")
+variable = st.text_input("Enter requirements to view Smart Broker GenAI's output:")
+ask_question = st.button("Ask Query!")
 
 
 if ask_question:
@@ -140,7 +140,7 @@ if ask_question:
     response = get_gemini_response(question)
     print(response)
     # st.write(response)
-    st.subheader("List of Recommended Properties")
+    st.subheader("Output")
     try:
         start_index1 = response.find('#')
         start_index2 = response.rfind(')')
@@ -150,5 +150,5 @@ if ask_question:
                 exec(exec_code)
             captured_output = output_buffer.getvalue()
     except:
-         captured_output = "No Recommendations possible!"
+         captured_output = "No Output Available!"
     st.code(captured_output, language='python')
