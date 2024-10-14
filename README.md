@@ -6,9 +6,8 @@ Smart Broker is a GenAI powered chatbot and dashboard app framework built specif
 Real estate sector in India is expected to reach USD 1 trillion in market size by 2030, up from USD 200 billion in 2021 and contribute 13% to the country’s GDP by 2025. Retail, hospitality, and commercial real estate are also growing significantly, providing the much-needed infrastructure for India's growing needs. India’s real estate sector is expected to expand to USD 5.8 trillion by 2047, contributing 15.5% to the GDP from an existing share of 7.3%.
 
 In FY23, India’s residential property market witnessed with the value of home sales reaching an all-time high of Rs. 3.47 lakh crore (USD 42 billion), marking a robust 48% YoY increase. The volume of sales also exhibited a strong growth trajectory, with a 36% rise to 379,095 units sold. Indian real estate developers operating in the country’s major urban centers are poised to achieve a significant feat in 2023, with the completion of approximately 558,000 homes. In 2023, demand for residential properties surged in the top 8 Indian cities, driven by mid-income, premium, and luxury segments despite challenges like high mortgage rates and property prices. 
-Reference: https://www.ibef.org/industry/real-estate-india
 
-<a href='https://www.kaggle.com/datasets/shudhanshusingh/real-estate-properties-dataset?fbclid=IwY2xjawF586hleHRuA2FlbQIxMAABHRVEvOnR9q9PbPwNdaa4ubMDFowszqHKiKrgEkv4CYmUm6qarndUB4HzDg_aem_QVfmJpWGddV-_Tdkuo-MrA'>Link to Kaggle Open-source Dataset used</a>
+Reference: https://www.ibef.org/industry/real-estate-india
 
 This app is built to for the following functionalities:
 
@@ -26,7 +25,9 @@ The main motive of the app is to solve the below problems:
 
 **Detailed App Demo: https://www.youtube.com/watch?v=m59kSk1YhOo**
 
-### How the app is designed:
+**Kaggle Open-source Dataset used:** <a href='https://www.kaggle.com/datasets/shudhanshusingh/real-estate-properties-dataset?fbclid=IwY2xjawF586hleHRuA2FlbQIxMAABHRVEvOnR9q9PbPwNdaa4ubMDFowszqHKiKrgEkv4CYmUm6qarndUB4HzDg_aem_QVfmJpWGddV-_Tdkuo-MrA'>Link</a>
+
+### App Workflow:
 
 ![Smart Broker](https://github.com/user-attachments/assets/e4b88d3f-d1c2-4927-8a4c-9ac72ce7dafe)
 
