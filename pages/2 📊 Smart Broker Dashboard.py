@@ -135,7 +135,7 @@ ask_question = st.button("Ask Query!")
 
 if ask_question:
     question = f"use the dataframe with name df and columns {df.columns} to generate python code for " + variable \
-        + 'Print the output dataframe.'
+        + 'While putting filter on string based columns, make sure case sensitivity is taken care in code. Print the output dataframe.'
     
     response = get_gemini_response(question)
     print(response)
